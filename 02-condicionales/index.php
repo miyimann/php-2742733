@@ -1,13 +1,28 @@
 <?php
-$edad=20;
+$articulos=12;
 
-if ($edad>18) {
-    echo 'eres mayor de edad';
+if ($articulos>12) {
+    echo 'caja rapida';
+}
+else if ($articulos>12) {
+    echo 'caja normal'
+}
+$ciudadanos=18;
+if ($ciudadanos>18) {
+    echo 'puedes votar'
+}
 
-}   else {
+else if ($ciudadanos<18) {
+    echo 'no puedes votar'
+}
 
-    }
- echo 'eres menor de edad'
+
+
+
+
+
+
+
 
 
 

@@ -2,6 +2,6 @@
 
 echo 'ejecutando condicionales...'
 
-
+else
 
 ?>
