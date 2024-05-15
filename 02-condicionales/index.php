@@ -94,6 +94,4 @@ switch($aire){
         echo 'el color no es valido';
         break;
 }
-
-
 ?>
