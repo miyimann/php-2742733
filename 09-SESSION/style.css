@@ -1,0 +1,103 @@
+body{
+    background-image: url(bfcf.jpg) ;
+    background-repeat: no-repeat;
+    background-size:cover ;
+
+}
+
+.contenedorregistro{
+    width: 23rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.581);
+    color: white;
+    text-decoration: none;
+    box-shadow: black 0px 10px 10px;
+    display: flex;
+    
+    
+}
+.paginainicio{
+    justify-content: center;
+    font-family: sans-serif;
+    padding-top: 10px;
+    box-shadow: black 0px 10px 10px;
+    border-radius: 20px;
+}
+
+.usuario{
+    font-family: sans-serif;
+    padding-bottom: 30px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.usuarioo{
+font-family: sans-serif;
+padding-bottom: 30px;
+text-align: center;
+}
+
+input{
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+}
+
+.contraseña{
+    font-family: sans-serif;
+    padding-bottom: 30px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.contraseñaa{
+    font-family: sans-serif;
+    padding-bottom: 30px;
+
+}
+
+.inicio{
+    padding-bottom: 30px;
+    font-family: sans-serif;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: black 0px 10px 10px;
+}
+
+button{
+    border-radius: 10px;
+    background-color: rgb(162, 0, 255);
+    cursor: pointer;
+    color: whitesmoke;
+    box-shadow: black 0px 10px 10px;
+}
+
+
+.registrate{
+    border-radius: 10px;
+background-color: white ;
+    cursor: pointer;
+    color: whitesmoke;
+    box-shadow: black 0px 10px 10px;
+    font-family: sans-serif;
+    width: 5rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+
+}
+
+
+
+
+
+
+
+    

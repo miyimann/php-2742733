@@ -1,76 +1,88 @@
 <?php session_start();
 
-if ($_SERVER["REQUEST_METHOD"] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    echo 'datos enviadoshbjhj';
 
+    echo '<br>';
     $usuario = $_POST['user'];
     $password = $_POST['password'];
-    $correo = $_POST['correo'];
+    $email = $_POST['email'];
 
-    //verificación de los datos variacion / llenos
-    if (empty($usuario) or empty($password) or empty ($correo)) {
-        echo 'Rellene completo el formulario';
+
+
+    if (empty($usuario) or empty($password) or empty($email)) {
+        echo 'rellene completo el formulario';
     } else {
+        //echo $usuario . ' - ' . $password;
+        $_SESSION['userRegister'] = $usuario;
+        $_SESSION['passRegister'] = $password;
+        $_SESSION['emailRegister'] = $email;
 
-    //echo $usuario .' - ' . $password;
-    $_SESSION['userRegister'] = $usuario;
-    $_SESSION['passRegister'] = $password;
-    $_SESSION['correoRegister'] = $correo;
-    echo ' - variables de sesión guardadas 🥵';
+        //echo ' - variables de sesion guardadas🥶';
+        //header('location: index.php');
 
-    //header('location: index.php');
-    
-    try {
-        $conexion = new PDO("mysql: host=localhost; dbname=focaapp", 'root', '');
-    } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
+        try {
+            $conexion = new PDO("mysql: host=localhost; dbname=focaapp;", 'root', '');
+            echo "conexion OK";
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+
+
+
+        $statement = $conexion->prepare("INSERT INTO `userapp`( `ID`, `username`, `correo`, `contraseña`) VALUES (NULL, :username, :pass ,:correo)");
+
+
+        $statement->execute(array(":username" => $usuario, ":pass" => $password, ":correo" => $email));
+
+
+
+
+
+
+        /* 
+                foreach ($statement as $item) {
+                    echo$item['ID'] . ' - '. $item['Nombre'] . '<br>'; */
     }
-
-$statement = $conexion->prepare("INSERT INTO `userapp` (`ID`, Username`, `Correo`, `Contraseña`) VALUES (NULL, :usuario, :correo, :pass)");
-
-$statement->execute( Array(":usuario"=>$usuario, ":correo" => $correo, ":pass" => $password));
 }
-}
+
+
+
+
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
-<h1>Registrate</h1>
+    <h1>registrate</h1>
+
+    <form action="registro.php" method="POST">
+        <label for="user">usuario</label>
+        <input type="text" placeholder="usuario" name="user">
+        <label for="password">contraseña</label>
+        <input type="text" placeholder="password" name="password">
+        <label for="mail">correo</label>
+        <input type="email" placeholder="email" name="email">
+        <button type="submit">registrate</button>
 
 
-<form action="registro.php" method= "post">
-<label for="user">User</label>
-<input id="user" type="text" placeholder="User" name="user">
-<br>
-<br>
-<label for="password">Password</label>
-<input id="password" type="password" placeholder="Password" name="password">
-<br><br>
-<label for="correo">Correo</label>
-<input id="correo" type="correo" placeholder="Correo" name="correo">
-<br>
-<br>
-<button type="submit">Registrarse</button>
-</form>
+    </form>
 
-<?php if (isset ($_SESSION['userRegister'])) : ?>
-
-<p>Tus datos han sido registrados, vuelve para iniciar sesión</p>
-<p> <?php echo $_SESSION['userRegister'] . ' - ' . $_SESSION['passRegister'] . ' - ' . $_SESSION['correoRegister']; ?> </p>
-<a href="./index.php">Iniciar sesión</a>
-
-<?php endif?>
-
-
-
-?>
+    <?php if (isset($_SESSION['userRegister'])) : ?>
+        <p>Datos registrados, ya puedes iniciar sesion</p>
+        <p> <?php echo $_SESSION['userRegister'] . ' - ' . $_SESSION['passRegister'] ?> </p>
+        <a href="index.php">iniciar sesion</a>
+    <?php endif ?>
 
 </body>
+
 </html>
