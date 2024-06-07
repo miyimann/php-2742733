@@ -62,51 +62,55 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 </head>
 
 <body>
+    <div class="posicionar">
+        <div class="contenedorregistro">
+            <div class="paginainicio">
+                <h1>Pagina De Inicio</h1>
+            </div>
+            <div>
 
-    <div class="contenedorregistro">
-        <div class="paginainicio">
-            <h1>Pagina De Inicio</h1>
+                <form action="index.php" method="POST">
+
+                    <div class="usuario pt-5">
+                        <label for="user">Usuario</label>
+                    </div>
+
+
+                    <div class="usuarioo">
+                        <input type="text" placeholder="Usuario" name="user">
+                    </div>
+
+
+
+                    <div class="contraseña">
+                        <label for="password">Contraseña</label>
+                    </div>
+
+
+
+                    <div class="contraseñaa">
+                        <input type="text" placeholder="Password" name="password">
+                    </div>
+
+
+
+                    <div class="inicio">
+                        <button type="submit">Inicio Sesion</button>
+                    </div>
+
+
+
+                </form>
+                <div class="registrate">
+
+
+                    <a href="./registro.php">registrate</a>
+
+
+                </div>
+            </div>
         </div>
-
-        <form action="index.php" method="POST">
-
-            <div class="usuario pt-5">
-                <label for="user">Usuario</label>
-            </div>
-
-
-            <div class="usuarioo">
-                <input  type="text" placeholder="Usuario" name="user">
-            </div>
-
-
-
-            <div class="contraseña">
-                <label for="password">Contraseña</label>
-            </div>
-
-
-
-            <div class="contraseñaa">
-                <input type="text" placeholder="Password" name="password">
-            </div>
-
-
-
-            <div class="inicio">
-                <button type="submit">Inicio Sesion</button>
-            </div>
-
-
-
-        </form>
-        <div class="registrate">
-
-
-            <a href="./registro.php">registrate</a>
-
-
-        </div>
+    </div>
 
 
 </body>

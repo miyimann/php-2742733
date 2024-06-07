@@ -1,0 +1,123 @@
+body {
+background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+
+
+#particles-js {
+height: 100vh;
+width: 100%;
+display: flex;
+margin-right: 80px;
+}
+
+.posicionar{
+    display: flex;
+    margin-left: 200px;
+    padding-top: 80px;
+}
+
+.contenedorregistro {
+    width: 23rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50px;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    text-decoration: none;
+    box-shadow: #8c00ff 0px 10px 20px;
+    position: relative;
+    z-index: 99;
+ 
+}
+
+.paginainicio {
+    justify-content: center;
+    font-family: sans-serif;
+    padding-top: 10px;
+    box-shadow: black 0px 10px 10px;
+    border-radius: 20px;
+}
+
+.usuario {
+    font-family: sans-serif;
+    padding-bottom: 30px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.usuarioo {
+    font-family: sans-serif;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+input {
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+}
+
+.contraseña {
+    font-family: sans-serif;
+    padding-bottom: 30px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.contraseñaa {
+    font-family: sans-serif;
+    padding-bottom: 30px;
+
+}
+
+.inicio {
+
+    font-family: sans-serif;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: black 0px 10px 10px;
+}
+
+button {
+    border-radius: 10px;
+    background-color: #8c00ff;
+    cursor: pointer;
+    color: whitesmoke;
+    box-shadow: black 0px 10px 10px;
+}
+
+
+.registrate {
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    color: whitesmoke;
+    box-shadow: black 0px 10px 10px;
+    font-family: sans-serif;
+    width: 5rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    align-items: center;
+    align-content: center;
+    margin-left: 50px;
+    margin-top: 30px;
+    text-decoration: none;
+
+}
+
+
+a.registrate{
+
+    text-decoration: none;
+}
+
