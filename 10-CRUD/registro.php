@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <div id="particles-js" class="jejejejejejje">
         <div class="posicionar">
-            <div class="    ">
+            <div class="contenedorregistro">
                 <div class="paginainicio">
                     <h1>registrate</h1>
                 </div>
