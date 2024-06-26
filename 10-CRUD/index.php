@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
 <body>
 
-    <div id="particles-js" class="jejejejejejje">
+    <div id="particles-js-canvas-el" class="jejejejejejje">
 
 
         <div class="posicionar">
@@ -118,6 +118,8 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     </div>
 
 
+
+    <script src="scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="particulas.js"></script>
 

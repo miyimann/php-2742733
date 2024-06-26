@@ -30,7 +30,7 @@ margin-right: 80px;
     background-color: rgb(17, 17, 17);
     color: white;
     text-decoration: none;
-    box-shadow: #8c00ff 0px 10px 20px;
+    box-shadow: #ff9900 0px 10px 20px;
     position: relative;
     z-index: 99;
  
@@ -121,3 +121,10 @@ a.registrate{
     text-decoration: none;
 }
 
+.particles-js-canvas-el{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
